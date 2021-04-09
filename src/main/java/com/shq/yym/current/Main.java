@@ -6,6 +6,8 @@ import com.shq.yym.current.链表.CircleLinkedList;
 import com.shq.yym.current.链表.List;
 import com.shq.yym.current.队列.CircleDeque;
 import com.shq.yym.current.队列.CircleQueue;
+import java.util.LinkedHashMap;
+import java.util.Map.Entry;
 import java.util.Objects;
 import org.springframework.util.StringUtils;
 
@@ -104,8 +106,19 @@ public class Main {
     public static void main(String[] args) {
 
 //        testCircleDeque();
-        System.out.println(new _42_接雨水().trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
-        System.out.println(new _42_接雨水().trap(new int[]{0, 1, 0, 2, 0, 2, 1,3, 0, 0, 0, 1}));
+        LinkedHashMap<String, Object> linkedHashMap = new LinkedHashMap<>(16, 0.75f, true);
+
+        linkedHashMap.put("c", 200);
+        linkedHashMap.put("a", 300);
+        linkedHashMap.put("d", 500);
+        linkedHashMap.get("c");
+        linkedHashMap.put("a", 100);
+
+        for (Entry<String, Object> entry : linkedHashMap.entrySet()) {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+//        System.out.println(new _42_接雨水().trap(new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}));
+//        System.out.println(new _42_接雨水().trap(new int[]{0, 1, 0, 2, 0, 2, 1,3, 0, 0, 0, 1}));
 //        Stack<Integer> stack = new Stack<>();
 //        stack.
 //          System.out.println(new _150_逆波兰表达式求值().evalRPN(new String[]{"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"}));
